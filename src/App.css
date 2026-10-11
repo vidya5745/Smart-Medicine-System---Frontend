@@ -1,0 +1,713 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef5f2;
+  color: #26332f;
+}
+
+
+/* ================================
+   MAIN APP - MOBILE STYLE
+================================ */
+
+#root {
+  min-height: 100vh;
+}
+
+.app,
+.dashboard,
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #eef5f2;
+}
+
+
+/* ================================
+   MOBILE APP CONTAINER
+================================ */
+
+.dashboard {
+  max-width: 520px;
+  margin: auto;
+  background: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header,
+.topbar,
+.app-header {
+  background: #2e8b57;
+  color: white;
+  padding: 18px 20px;
+  border-radius: 0 0 22px 22px;
+}
+
+header h1,
+.topbar h1,
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header p,
+.topbar p,
+.app-header p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+main,
+.dashboard-content,
+.content {
+  padding: 20px;
+}
+
+
+/* ================================
+   WELCOME
+================================ */
+
+.welcome {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+
+/* ================================
+   PATIENT CARDS
+================================ */
+
+.patient-card,
+.patient,
+.patient-box {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 14px;
+  border: 1px solid #e0e8e4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.patient-card h3,
+.patient h3,
+.patient-box h3 {
+  margin: 0 0 8px;
+  color: #2e8b57;
+  font-size: 18px;
+}
+
+.patient-card p,
+.patient p,
+.patient-box p {
+  margin: 5px 0;
+  color: #65736e;
+  font-size: 14px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+button,
+.add-button,
+.login-button {
+  border: none;
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #2e8b57;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover,
+.add-button:hover,
+.login-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+.logout-button {
+  background: white;
+  color: #2e8b57;
+  border: 1px solid #2e8b57;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+
+/* ================================
+   MEDICINE CARDS
+================================ */
+
+.medicine-card,
+.medicine,
+.medicine-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 14px;
+  border: 1px solid #e0e8e4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.medicine-card h3,
+.medicine h3,
+.medicine-box h3 {
+  margin: 0 0 10px;
+  color: #2e8b57;
+  font-size: 19px;
+}
+
+.medicine-card p,
+.medicine p,
+.medicine-box p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #65736e;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.status-pending {
+  background: #fff4cc;
+  color: #9a7200;
+}
+
+.status-taken {
+  background: #dff5e8;
+  color: #23804a;
+}
+
+.status-missed {
+  background: #ffe1e1;
+  color: #c0392b;
+}
+
+
+/* ================================
+   TAKEN / MISSED BUTTONS
+================================ */
+
+.taken-button {
+  background: #2e8b57;
+  margin-right: 8px;
+}
+
+.missed-button {
+  background: #d9534f;
+  margin-right: 8px;
+}
+
+.delete-button {
+  background: #777;
+}
+
+
+/* ================================
+   FORMS
+================================ */
+
+form {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #34433d;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d5dfda;
+  border-radius: 11px;
+  font-size: 14px;
+  background: #fafcfb;
+  color: #26332f;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2e8b57;
+}
+
+
+/* ================================
+   ADD MEDICINE FORM
+================================ */
+
+.medicine-form,
+.add-medicine,
+.form-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e8e4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.medicine-form h2,
+.add-medicine h2,
+.form-card h2 {
+  margin-top: 0;
+  color: #2e8b57;
+  font-size: 20px;
+}
+
+
+/* ================================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+/* ================================
+   ROLE SELECTION
+================================ */
+
+.role-card {
+  width: 360px;
+  max-width: 100%;
+  background: white;
+  padding: 30px 22px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.role-card h1 {
+  color: #2e8b57;
+  font-size: 25px;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #718078;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.role-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.role-button {
+  width: 100%;
+  min-height: 70px;
+  background: #f7faf8;
+  color: #2e8b57;
+  border: 1px solid #dce8e1;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.role-button:hover {
+  background: #eaf5ef;
+  border-color: #2e8b57;
+}
+
+.role-icon {
+  font-size: 28px;
+}
+
+
+/* ================================
+   LOGIN CARD
+================================ */
+
+.login-card {
+  width: 360px;
+  max-width: 100%;
+  background: white;
+  padding: 25px 22px;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+  text-align: center;
+  color: #2e8b57;
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.login-icon {
+  text-align: center;
+  font-size: 42px;
+}
+
+.back-button {
+  background: transparent;
+  color: #65736e;
+  padding: 5px;
+  border: none;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border-radius: 12px;
+  background: #2e8b57;
+  color: white;
+}
+
+
+/* ================================
+   REGISTER TEXT
+================================ */
+
+.register-text {
+  text-align: center;
+  font-size: 13px;
+  color: #718078;
+  margin-top: 20px;
+}
+
+.register-text span {
+  color: #2e8b57;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+  .dashboard {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  header,
+  .topbar,
+  .app-header {
+    padding: 16px;
+  }
+
+  header h1,
+  .topbar h1,
+  .app-header h1 {
+    font-size: 21px;
+  }
+
+  main,
+  .dashboard-content,
+  .content {
+    padding: 15px;
+  }
+
+  .patient-card,
+  .medicine-card,
+  .medicine-form,
+  .form-card {
+    border-radius: 16px;
+    padding: 15px;
+  }
+
+  .role-card,
+  .login-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+/* =========================================
+   MEDICINE REMINDER POPUP
+   ========================================= */
+
+.reminder-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.reminder-popup {
+  width: 340px;
+  max-width: 90%;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+
+  animation: reminderAppear 0.25s ease-out;
+}
+
+.reminder-icon {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.reminder-popup h2 {
+  margin: 5px 0 10px;
+
+  color: #2e8b57;
+
+  font-size: 23px;
+}
+
+.reminder-message {
+  color: #555;
+
+  margin-bottom: 18px;
+}
+
+.reminder-medicine {
+  background: #f4f8f6;
+
+  border-radius: 12px;
+
+  padding: 12px;
+
+  margin-bottom: 20px;
+}
+
+.reminder-medicine h3 {
+  margin: 0 0 10px;
+
+  color: #333;
+}
+
+.reminder-medicine p {
+  margin: 6px 0;
+
+  color: #555;
+}
+
+.reminder-ok-button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2e8b57;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.reminder-ok-button:hover {
+  background: #256f46;
+}
+
+@keyframes reminderAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================
+   ADD MEDICINE POPUP
+   ========================================= */
+
+.modal-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 5000;
+
+  padding: 20px;
+}
+
+.medicine-modal {
+  position: relative;
+
+  width: 450px;
+  max-width: 95%;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  position: absolute;
+
+  right: 15px;
+  top: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 28px;
+
+  color: #777;
+
+  cursor: pointer;
+}
+
+.medicine-modal h2 {
+  color: #2e8b57;
+
+  margin-top: 0;
+
+  margin-bottom: 10px;
+}
+
+.medicine-modal form {
+  margin-top: 20px;
+}
+
+.medicine-modal label {
+  display: block;
+
+  margin-top: 12px;
+  margin-bottom: 5px;
+
+  font-weight: bold;
+}
+
+.medicine-modal input {
+  width: 100%;
+
+  padding: 11px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+.save-medicine-button {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #2e8b57;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
